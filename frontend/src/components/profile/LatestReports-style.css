@@ -1,0 +1,61 @@
+.reports-content {
+    width: 100%;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+    align-items: center;
+}
+
+.reports-content-items>.travel-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 10px 10px 25px rgba(255, 255, 255, 0.5);
+}
+
+.reports-content-items .travel-card .travel-content-description {
+    background: #ffffff;
+}
+
+.no-reports {
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 1920px) {
+    .reports-content-items {
+        transform: scale(0.75);
+        transform-origin: top;
+        margin-bottom: -175px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .reports-content {
+        grid-template-columns: 100%;
+    }
+    .reports-content-items {
+        transform: scale(0.8);
+        margin-bottom: -100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reports-content-items {
+        transform: scale(0.6);
+        margin-bottom: -250px;
+    }
+
+    .no-reports {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 567px) {
+    .reports-content-items {
+        transform: scale(0.6);
+        margin-bottom: -350px;
+    }
+}

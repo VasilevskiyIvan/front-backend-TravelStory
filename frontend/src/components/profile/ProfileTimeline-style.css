@@ -1,0 +1,104 @@
+.timeline {
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(90deg, rgb(100, 0, 0), rgb(255, 196, 0));
+}
+
+.year {
+    position: absolute;
+    color: #333;
+    transform: translateX(-50%);
+    top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    left: var(--position);
+    pointer-events: none;
+}
+
+.marker {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: rgb(229, 255, 0);
+    border-radius: 10%;
+    top: -5px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid black;
+    left: var(--position);
+}
+
+.marker:hover {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.marker.active {
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        width: 20px;
+        height: 800px;
+        margin: 20px auto;
+        background: linear-gradient(180deg, rgb(100, 0, 0), rgb(255, 196, 0));
+    }
+
+    .year {
+        left: 35px;
+        top: var(--position);
+        transform: translateY(-50%);
+        font-size: 14px;
+    }
+
+    .marker {
+        left: 50%;
+        top: var(--position);
+        transform: translateX(-50%);
+        width: 30px;
+        height: 10px;
+    }
+
+    .event-list {
+        left: 25px;
+        bottom: auto;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.event-list {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #333;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+    min-width: 120px;
+}
+
+.event-list a {
+    display: block;
+    text-decoration: none;
+    color: #007bff;
+    margin: 2px 0;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+.marker.active .event-list {
+    opacity: 1;
+    display: block;
+}

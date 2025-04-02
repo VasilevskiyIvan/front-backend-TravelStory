@@ -1,0 +1,91 @@
+.stats-table {
+    width: 100%;
+    height: 500px;
+    padding: 25px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 5px solid rgb(66, 66, 66);
+    border-radius: 25px;
+    border-collapse: separate;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.title-stats {
+    padding: 0 5px;
+    color: rgb(255, 255, 255);
+    font-family: 'Playfair Display SC', serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    width: 40%;
+}
+
+td {
+    padding: 5px 10px 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+th {
+    padding: 5px 5px 0;
+    background-color: rgb(66, 66, 66);
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.stats-columns-title {
+    width: 30%;
+    height: 50px;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+@media (max-width: 1400px) {
+    .title-stats {
+        font-size: 24px;
+    }
+
+    .stats-columns-title {
+        font-size: 20px;
+    }
+
+    .stats-table {
+        padding: 5px;
+    }
+}
+@media (max-width: 992px) {
+    .stats-table {
+        height: 400px;
+    }
+
+    td {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 567px) {
+    .title-stats {
+        width: 125px;
+        height: 25px;
+        padding: 5px;
+        font-size: 18px;
+    }
+
+    .stats-columns-title {
+        font-size: 14px;
+    }
+
+    .stats-table {
+        padding: 0;
+    }
+}

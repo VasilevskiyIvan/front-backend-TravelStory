@@ -1,0 +1,128 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.login-form {
+  margin-top: 150px;
+  margin-bottom: 150px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+  padding: 25px 25px 25px 25px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  height: max-content;
+  font-family: 'Playfair Display SC', serif;
+}
+
+.login-form h2 {
+  height: 50px;
+  font-size: 48px;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  font-family: 'Playfair Display SC', serif;
+  margin-bottom: 50px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #34495e;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-login-button {
+  width: 80%;
+  height: 75px;
+  margin: 25px 0px;
+  padding: 10px;
+  background: rgba(12, 196, 12, 0.8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 26px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-auth-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.go-button {
+  display: block;
+  width: 60%;
+  height: 50px;
+  padding: 10px;
+  background: rgba(255, 174, 0, 0.8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.go-button:hover {
+  background: rgba(255, 174, 0, 1);
+}
+
+.submit-login-button:hover {
+  background: rgb(100, 255, 100);
+  color: black;
+}
+
+.error-message {
+  color: #e74c3c;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(231, 76, 60, 0.1);
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+}
+
+@media (max-width: 567px) {
+  .login-form h2 {
+    font-size: 34px;
+  }
+  .submit-login-button {
+    width: 100%;
+  }
+  
+  .go-button {
+    width: 100%;
+  }
+}

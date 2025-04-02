@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+button {
+    border: 0px;
+}
+
+.travel-card {
+    width: 800px;
+    height: 770px;
+    border-radius: 25px;
+    padding: 25px 45px;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.6);
+    transform: scale(1.0);
+    transform-origin: center;
+}
+
+.travel-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.travel-header img {
+    width: 490px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.travel-header .side-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.side-info img {
+    width: 210px;
+    height: 255px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.report-button {
+    background: rgba(12, 196, 12, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 75px;
+}
+
+.report-button-2 {
+    width: 210px;
+    height: 95px;
+    background: rgba(12, 196, 12, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+.report-button img {
+    width: 50px;
+    height: 50px;
+}
+
+.report-button-2 img,
+.edit-button img {
+    width: 60px;
+    height: 60px;
+}
+
+.report-button img,
+.report-button-2 img {
+    filter: invert(1);
+}
+
+.travel-content-head {
+    margin-top: 10px;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 490px 210px;
+    gap: 10px;
+    justify-self: center;
+}
+
+.travel-content-body {
+    margin-top: 10px;
+    width: 710px;
+    height: 290px;
+    display: flex;
+    gap: 10px;
+}
+
+.travel-content {
+    width: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.travel-content-name,
+.travel-content-info {
+    display: flex;
+    background-color: rgb(66, 66, 66);
+    font-family: 'Playfair Display SC', serif;
+    color: white;
+    font-size: 24px;
+    width: 490px;
+    height: 50px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel-content-description {
+    width: 490px;
+    height: 230px;
+    font-family: 'Playfair Display', serif;
+    background: #ddd;
+    padding: 10px;
+    font-size: 22px;
+}
+
+.travel-content-info {
+    width: 210px;
+}
+
+.travel-info {
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-container {
+    display: flex;
+    width: 210px;
+}
+
+.date-box {
+    font-family: 'Playfair Display', serif;
+    width: 105px;
+    height: 80px;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.date-box:first-child {
+    background: #bbb;
+}
+
+.duration-box {
+    font-family: 'Playfair Display', serif;
+    width: 210px;
+    height: 50px;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #000;
+}
+
+.edit-button {
+    width: 210px;
+    height: 90px;
+    background: rgba(248, 79, 0, 0.705);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.edit-button img{
+    filter: invert(1);
+}
+
+.edit-button:hover,
+.report-button:hover,
+.report-button-2:hover {
+    transform: scale(1.01);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.25s ease;
+}
+
+.info-span {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.to-profile-button, .to-reports-button {
+    background: rgba(12, 196, 12, 0.8);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    white-space: nowrap;
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    margin-right: 10px;
+}
+
+.to-reports-button {
+    background: rgba(248, 79, 0, 0.705);
+}
+
+.to-profile-button img, .to-reports-button img{
+    height: 35px;
+    width: 35px;
+    filter: invert(1);
+}
+
+.to-profile-button:hover, .to-reports-button:hover {
+    transform: scale(1.01);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.travel-username {
+    background: rgb(66, 66, 66);
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: 60px;
+    width: 100%;
+}
+
+.edit-button.disabled {
+    background: rgba(150, 150, 150, 0.5) !important;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.edit-button.disabled:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.report-button {
+    height: 85px;
+}
+
+@media (max-width: 567px) {
+    .travel-card {
+        padding: 25px 10px;
+        height: 1075px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .travel-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .report-button {
+        display: none;
+    }
+
+    .side-info img {
+        display: none;
+    }
+
+    .travel-content-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .travel-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .travel-content-name,
+    .travel-content-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .travel-content-description {
+        width: 100%;
+        text-align: center;
+    }
+
+    .travel-content-info {
+        width: 100%;
+    }
+
+    .travel-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .date-box {
+        width: 50%;
+        text-align: center;
+    }
+
+    .duration-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    .edit-button {
+        width: 210px;
+        height: 95px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .edit-button {
+        margin-top: 0;
+    }
+
+    .report-button-2 {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+    .user-header {
+        width: 100%;
+    }
+    .travel-username {
+        font-size: 26px;
+        padding-top: 10px;
+    }
+}
